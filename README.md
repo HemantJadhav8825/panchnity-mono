@@ -1,4 +1,4 @@
-# We belong (Panchnity Monorepo)
+# Panchnity
 
 > A mental health-focused social platform designed to foster meaningful connections without the pressure of metrics.
 
@@ -8,7 +8,7 @@
 
 ---
 
-**We belong** is a production-ready monorepo workspace built for scalability and performance. It leverages modern web technologies to deliver a secure, responsive, and intuitive user experience.
+**Panchnity** (formerly We belong) is a production-ready monorepo workspace built for scalability and performance. It leverages modern web technologies to deliver a secure, responsive, and intuitive user experience.
 
 ## 🛠️ Tech Stack
 
@@ -31,14 +31,12 @@ The project is organized as a monorepo:
 ### 📱 Applications (`apps/`)
 
 - **[frontend](./apps/frontend)**: The main Next.js web application for users.
-- **[admin-panel](./apps/admin-panel)**: Internal dashboard for content and user management.
-- **[backend](./apps/backend)**: Core API gateway and diverse microservices (if split).
+- **[backend](./apps/backend)**: Core API Gateway and microservices orchestrator.
 
 ### 🔧 Services (`services/`)
 
 - **[auth-service](./services/auth-service)**: Handles user authentication, registration, and session management.
-- **[payment-service](./services/payment-service)**: Manages subscriptions and transactions.
-- **[notification-service](./services/notification-service)**: Real-time notification system.
+- **[chat-service](./services/chat-service)**: Real-time chat functionality and message history.
 
 ### 📦 Packages (`packages/`)
 
@@ -69,8 +67,8 @@ Follow these steps to set up the project locally.
 1.  **Clone the repository:**
 
     ```bash
-    git clone https://github.com/HemantJadhav8825/panchnity.git
-    cd panchnity
+    git clone https://github.com/HemantJadhav8825/panchnity-mono.git
+    cd panchnity-mono
     ```
 
 2.  **Install dependencies:**
@@ -100,6 +98,15 @@ Follow these steps to set up the project locally.
 | `pnpm lint`              | Run ESLint across the workspace.          |
 | `pnpm clean`             | detailed clean up of `node_modules`.      |
 | `pnpm check:consistency` | Ensure package versions are synchronized. |
+
+### Service Ports
+
+| Service       | Port |
+| :------------ | :--- |
+| Frontend      | 3002 |
+| Backend       | 4000 |
+| Auth Service  | 4100 |
+| Chat Service  | 4200 |
 
 ## 🛡️ Best Practices
 
