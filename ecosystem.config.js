@@ -31,7 +31,7 @@ module.exports = {
       },
     },
     {
-      name: "hold-yourself-chat",
+      name: "panchnity-chat",
       cwd: "./services/chat-service",
       script: "dist/server.js",
       env_file: ".env",
@@ -47,7 +47,7 @@ module.exports = {
     },
 
     {
-      name: "hold-yourself-frontend",
+      name: "panchnity-frontend",
       cwd: "./apps/frontend",
       script: "node_modules/next/dist/bin/next",
       args: "start -p 4002",
