@@ -1,6 +1,6 @@
 # Profile Page Overrides
 
-> **PROJECT:** Hold Yourself
+> **PROJECT:** Panchnity
 > **Generated:** 2026-02-02 01:57:57
 > **Page Type:** Dashboard / Data View
 

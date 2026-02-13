@@ -7,7 +7,7 @@ export interface OnboardingState {
   completedAt?: number;
 }
 
-const getOnboardingKey = (userId: string) => `webelong_onboarding_state_${userId}`;
+const getOnboardingKey = (userId: string) => `panchnity_onboarding_state_${userId}`;
 
 /**
  * Resolves the deterministic state of onboarding for the current session.
@@ -25,15 +25,15 @@ export function getSafeOnboardingState(user: User | null): OnboardingStatus {
     // 2. Local State Check (User-Scoped)
     const key = getOnboardingKey(user.id);
     const stored = localStorage.getItem(key);
-    
+
     if (stored) {
       const state = JSON.parse(stored) as OnboardingState;
-      
+
       // REFRESH TRAP / CRASH SAFETY:
       if (state.status === 'in_progress') {
         return 'skipped';
       }
-      
+
       return state.status;
     }
 

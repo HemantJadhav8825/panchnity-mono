@@ -15,7 +15,7 @@ const start = async () => {
   const PORT = process.env.PORT;
 
   app.listen(PORT, () => {
-    console.log(`Backend Gateway running on port ${PORT}`);
+    console.log(`✅ Backend Gateway running on port ${PORT}`);
   });
 };
 

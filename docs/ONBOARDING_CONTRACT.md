@@ -1,4 +1,4 @@
-# ONBOARDING CONTRACT: WEBELONG PLATFORM
+# ONBOARDING CONTRACT: PANCHNITY PLATFORM
 
 > **STATUS:** DRAFT / PROPOSED
 > **VERSION:** 1.0.0
@@ -8,7 +8,7 @@
 
 ## 1. PREAMBLE & PHILOSOPHY
 
-Webelong is a "belonging-first" platform. Our onboarding is not a funnel; it is a **foyer**.
+Panchnity is a "belonging-first" platform. Our onboarding is not a funnel; it is a **foyer**.
 It must feel safe, optional, and non-invasive. We do not extract value from the user; we offer them a space.
 
 **This contract is the SINGLE SOURCE OF TRUTH for the onboarding system logic.**
@@ -105,7 +105,7 @@ The system must handle these interruptions gracefully without trapping the user.
 | **Close Tab / Session End**     | Treat as "Skip All". Next login goes straight to Dashboard.                                                 |
 | **Network Failure on Step 2/3** | Fail silently. Save no data. Proceed to next step or Dashboard.                                             |
 | **User Logs Out Mid-Flow**      | Treat as "Skip All". Next login goes straight to Dashboard.                                                 |
-| **"Back" Button Usage**         | Allowed. Users can change previous answers until Step 5 is reached.                                         |
+| **Back" Button Usage**         | Allowed. Users can change previous answers until Step 5 is reached.                                         |
 | **Crash / Error**               | Fallback to Dashboard immediately. Log error silently.                                                      |
 
 **Universal Fallback Rule:**

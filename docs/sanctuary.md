@@ -5,7 +5,7 @@
 > The Sanctuary is currently a v0 feature and is disabled by default.
 > To enable it, set `SANCTUARY_ENABLED=true` (Backend) and `NEXT_PUBLIC_SANCTUARY_ENABLED=true` (Frontend) in your environment variables.
 
-"The Sanctuary" is a dedicated space within the We belong platform designed for safe, anonymous, and ephemeral community interaction. It aims to provide users with a judgment-free zone to share their thoughts and feelings.
+"The Sanctuary" is a dedicated space within the Panchnity platform designed for safe, anonymous, and ephemeral community interaction. It aims to provide users with a judgment-free zone to share their thoughts and feelings.
 
 ## Core Features
 

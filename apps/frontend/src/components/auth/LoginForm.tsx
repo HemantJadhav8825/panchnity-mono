@@ -23,7 +23,7 @@ export const LoginForm: React.FC<LoginFormProps> = ({
   return (
     <div className="space-y-6">
       <GoogleButton />
-      
+
       <div className="relative">
         <div className="absolute inset-0 flex items-center">
           <div className="w-full border-t border-border"></div>
@@ -97,7 +97,7 @@ export const LoginForm: React.FC<LoginFormProps> = ({
         <p className="text-sm text-foreground/60 dark:text-muted-foreground font-bold">
           Don&apos;t have an account?{' '}
           <Link href="/signup" className="text-primary hover:brightness-110 font-extrabold transition-all border-b border-primary/20 hover:border-primary">
-            Join WeBelong
+            Join Panchnity
           </Link>
         </p>
       </div>

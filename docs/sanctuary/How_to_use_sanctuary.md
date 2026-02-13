@@ -1,6 +1,6 @@
 # How to Use Sanctuary
 
-**Product:** We belong  
+**Product:** Panchnity  
 **Feature:** Sanctuary  
 **Access:** Available when enabled for your account
 
@@ -8,7 +8,7 @@
 
 ## What Is Sanctuary?
 
-Sanctuary is a **temporary, anonymous space** inside _We belong_ where you can release thoughts or feelings without judgment, identity, or permanence.
+Sanctuary is a **temporary, anonymous space** inside _Panchnity_ where you can release thoughts or feelings without judgment, identity, or permanence.
 
 It is not a chat, community, or profile-based feature.  
 It exists so you can say something safely — and then let it go.
@@ -17,11 +17,11 @@ It exists so you can say something safely — and then let it go.
 
 ## Step-by-Step Guide
 
-### 1. Log in to We belong
+### 1. Log in to Panchnity
 
 You must be logged in to use Sanctuary.
 
-Sanctuary is anonymous **inside** We belong, but it is not available to logged-out users.
+Sanctuary is anonymous **inside** Panchnity, but it is not available to logged-out users.
 
 ---
 
@@ -49,7 +49,7 @@ The first time you enter Sanctuary:
 This identity:
 
 - Exists **only inside Sanctuary**
-- Is never shown elsewhere in We belong
+- Is never shown elsewhere in Panchnity
 - Cannot be linked back to you by other users
 
 You don’t need to set anything up — it happens automatically.
@@ -110,7 +110,7 @@ Acknowledgment is quiet and one-way.
 
 ### 7. Leave Sanctuary
 
-At any time, choose **“Return to We belong”**.
+At any time, choose **“Return to Panchnity”**.
 
 You may see a reminder like:
 

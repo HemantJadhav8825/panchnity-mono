@@ -37,11 +37,11 @@ export default function SignupPage() {
 
   return (
     <GuestGuard>
-      <AuthLayout 
-        title="Create Account" 
-        subtitle="Join WeBelong and find your community."
+      <AuthLayout
+        title="Create Account"
+        subtitle="Join Panchnity and find your community."
       >
-        <SignupForm 
+        <SignupForm
           formData={formData}
           isLoading={isLoading}
           error={error || localError}

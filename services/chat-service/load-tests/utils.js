@@ -22,7 +22,7 @@ function generateTestToken(userId = "test-user", email = "test@example.com") {
   return jwt.sign(payload, STATUS_PRIVATE_KEY, {
     algorithm,
     expiresIn: "1h",
-    issuer: "hold-yourself-auth",
+    issuer: "panchnity-auth",
   });
 }
 

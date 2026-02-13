@@ -11,7 +11,7 @@ import { brand } from "@/config/brand"
 import { useAuth } from "@/context/AuthContext"
 import { AuthGuard } from "@/components/auth/AuthGuard"
 import { DashShell } from "@/components/layout/DashShell"
-import { HoldingSpaceScreen } from "@/features/holding-space/screens/HoldingSpaceScreen"
+import { DashboardHome } from "@/components/dashboard/DashboardHome"
 
 export default function Home() {
   const { isAuthenticated, isLoading } = useAuth();
@@ -28,7 +28,7 @@ export default function Home() {
     return (
       <AuthGuard>
         <DashShell>
-          <HoldingSpaceScreen />
+          <DashboardHome />
         </DashShell>
       </AuthGuard>
     );

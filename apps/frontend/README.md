@@ -1,6 +1,6 @@
 # @panchnity/frontend
 
-Production-ready Next.js 16 frontend for the Hold Yourself monorepo.
+Production-ready Next.js 16 frontend for the Panchnity monorepo.
 
 ## Getting Started
 

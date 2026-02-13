@@ -1,6 +1,6 @@
 # When Sanctuary Appears in the User Journey
 
-**Product:** We belong  
+**Product:** Panchnity
 **Feature:** Sanctuary  
 **Audience:** Internal (Product, Design, Engineering)
 
@@ -8,7 +8,7 @@
 
 ## Purpose
 
-This document defines **when and where Sanctuary should appear** in the We belong user journey.
+This document defines **when and where Sanctuary should appear** in the Panchnity user journey.
 
 Sanctuary is intentionally **not a destination**.  
 It must appear only at moments of emotional friction and disappear once its purpose is served.
@@ -209,4 +209,4 @@ That is a signal to stop and re-evaluate.
 
 ---
 
-**Sanctuary exists to protect We belong — not to grow itself.**
+**Sanctuary exists to protect Panchnity — not to grow itself.**

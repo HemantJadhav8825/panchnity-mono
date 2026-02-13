@@ -18,5 +18,5 @@ const httpServer = http.createServer(app);
 socketService.init(httpServer);
 
 httpServer.listen(port, () => {
-  console.log(`Chat Service running on port ${port}`);
+  console.log(`✅ Chat Service running on port ${port}`);
 });

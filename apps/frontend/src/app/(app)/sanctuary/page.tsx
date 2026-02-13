@@ -70,15 +70,15 @@ export default function SanctuaryPage() {
       </div>
 
       <div className="flex flex-col items-center justify-center pt-8 border-t border-dashed border-border text-center">
-          <p className="text-xs text-muted-foreground mb-4">
-              You&apos;re not alone. This will pass.
-          </p>
-          <Button variant="link" className="text-xs text-muted-foreground hover:text-foreground transition-colors" onClick={() => {
-              markSanctuaryInteraction();
-              router.push('/');
-          }}>
-              Return to We belong
-          </Button>
+        <p className="text-xs text-muted-foreground mb-4">
+          You&apos;re not alone. This will pass.
+        </p>
+        <Button variant="link" className="text-xs text-muted-foreground hover:text-foreground transition-colors" onClick={() => {
+          markSanctuaryInteraction();
+          router.push('/');
+        }}>
+          Return to Panchnity
+        </Button>
       </div>
     </PageContainer>
   )
