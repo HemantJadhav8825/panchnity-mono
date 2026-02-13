@@ -1,7 +1,7 @@
 module.exports = {
   apps: [
     {
-      name: "hold-yourself-backend",
+      name: "panchnity-backend",
       cwd: "./apps/backend",
       script: "dist/server.js",
       env_file: ".env",
@@ -16,7 +16,7 @@ module.exports = {
       },
     },
     {
-      name: "hold-yourself-auth",
+      name: "panchnity-auth",
       cwd: "./services/auth-service",
       script: "dist/server.js",
       env_file: ".env",

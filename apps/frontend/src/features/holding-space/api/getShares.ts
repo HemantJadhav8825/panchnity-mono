@@ -1,8 +1,8 @@
 import client from '@/api/client';
-import { ShareDTO } from '../types'; 
+import { ShareDTO } from '../types';
 
 // Note: Direct import from 'packages/types/src' to avoid build issues if package.json exports aren't perfect in dev.
-// In a stricter monorepo setup, this should be '@webelong/types' or similar, but following existing patterns.
+// In a stricter monorepo setup, this should be '@panchnity/types' or similar, but following existing patterns.
 // If the previous analysis showed `packages/types/src/index.ts` exists, we can import from there.
 
 export const getShares = async (cursor?: string): Promise<ShareDTO[]> => {

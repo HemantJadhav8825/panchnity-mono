@@ -30,7 +30,7 @@ export function CreateVent({ onPosted }: CreateVentProps) {
     setError(null)
     try {
       const chatApiUrl = process.env.NEXT_PUBLIC_CHAT_API_URL || 'http://localhost:3200'
-      
+
       const author = user?.anonymousProfile ? {
         id: user.id,
         pseudonym: user.anonymousProfile.pseudonym,
@@ -38,9 +38,9 @@ export function CreateVent({ onPosted }: CreateVentProps) {
       } : undefined;
 
       await client.post(`${chatApiUrl}/v1/vents`, {
-          content,
-          mood: 'neutral', // Default to neutral
-          author
+        content,
+        mood: 'neutral', // Default to neutral
+        author
       })
 
       setContent("")
@@ -74,18 +74,18 @@ export function CreateVent({ onPosted }: CreateVentProps) {
           </div>
         </CardContent>
         <CardFooter className="flex flex-col gap-2 pb-8 px-8">
-          <Button 
-            variant="outline" 
+          <Button
+            variant="outline"
             className="w-full rounded-full bg-background border-border text-xs h-9"
             onClick={() => {
               markSanctuaryInteraction()
               router.push('/')
             }}
           >
-            Return to We belong
+            Return to Panchnity
           </Button>
-          <Button 
-            variant="ghost" 
+          <Button
+            variant="ghost"
             className="w-full text-xs text-muted-foreground hover:text-foreground h-8"
             onClick={() => {
               markSanctuaryInteraction()
@@ -106,8 +106,8 @@ export function CreateVent({ onPosted }: CreateVentProps) {
       </CardHeader>
       <CardContent className="space-y-4">
         <div className="space-y-1">
-          <Textarea 
-            placeholder="You can write here, if you want." 
+          <Textarea
+            placeholder="You can write here, if you want."
             value={content}
             onChange={(e) => setContent(e.target.value)}
             className="resize-none bg-muted/20 border-border focus-visible:ring-muted-foreground"
@@ -128,10 +128,10 @@ export function CreateVent({ onPosted }: CreateVentProps) {
         )}
       </CardContent>
       <CardFooter className="justify-end pt-0">
-        <Button 
-          variant="outline" 
-          size="sm" 
-          onClick={handleSubmit} 
+        <Button
+          variant="outline"
+          size="sm"
+          onClick={handleSubmit}
           disabled={loading || !content.trim()}
           className="text-xs h-8"
         >

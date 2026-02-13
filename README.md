@@ -8,7 +8,7 @@
 
 ---
 
-**Panchnity** (formerly We belong) is a production-ready monorepo workspace built for scalability and performance. It leverages modern web technologies to deliver a secure, responsive, and intuitive user experience.
+**Panchnity** is a production-ready monorepo workspace built for scalability and performance. It leverages modern web technologies to deliver a secure, responsive, and intuitive user experience.
 
 ## 🛠️ Tech Stack
 

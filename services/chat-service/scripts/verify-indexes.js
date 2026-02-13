@@ -3,7 +3,7 @@ const path = require("path");
 require("dotenv").config({ path: path.join(__dirname, "../.env") });
 
 const MONGO_URI =
-  process.env.DATABASE_URL || "mongodb://localhost:27017/hold_yourself_chat";
+  process.env.DATABASE_URL || "mongodb://localhost:27017/panchnity_chat";
 
 async function verifyIndexes() {
   console.log("Connecting to database...");

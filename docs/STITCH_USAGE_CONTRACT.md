@@ -1,4 +1,4 @@
-# STITCH USAGE CONTRACT: WEBELONG PLATFORM
+# STITCH USAGE CONTRACT: PANCHNITY PLATFORM
 
 > **STATUS:** ACTIVE / ENFORCEABLE
 > **VERSION:** 1.0.0
@@ -8,8 +8,8 @@
 
 ## 1. PREAMBLE & AUTHORITY
 
-This contract governs the use of the Google Stitch MCP and related AI tools within the Webelong ecosystem.
-Webelong is a **belonging-first** platform. Technology serves this mission, never the inverse.
+This contract governs the use of the Google Stitch MCP and related AI tools within the Panchnity ecosystem.
+Panchnity is a **belonging-first** platform. Technology serves this mission, never the inverse.
 
 **This contract is subordinate to `ONBOARDING_CONTRACT.md`.**
 Any AI-generated output that conflicts with the Onboarding Contract is automatically invalid and must be rejected.

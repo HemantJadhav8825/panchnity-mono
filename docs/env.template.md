@@ -21,9 +21,9 @@ For production, variables should be set in your CI/CD provider (e.g., GitHub Sec
 
 | Variable                          | Description                       | Example                                     |
 | :-------------------------------- | :-------------------------------- | :------------------------------------------ |
-| `NEXT_PUBLIC_API_URL`             | Base URL for the Backend Gateway  | `https://api.holdyourself.com`              |
+| `NEXT_PUBLIC_API_URL`             | Base URL for the Backend Gateway  | `https://api.panchnity.com`              |
 | `NEXT_PUBLIC_GOOGLE_CLIENT_ID`    | Production Google OAuth Client ID | `prod-google-id.apps.googleusercontent.com` |
-| `NEXT_PUBLIC_GOOGLE_REDIRECT_URI` | Production Redirect URI           | `https://holdyourself.com/login`            |
+| `NEXT_PUBLIC_GOOGLE_REDIRECT_URI` | Production Redirect URI           | `https://panchnity.com/login`            |
 
 ### Backend Gateway
 

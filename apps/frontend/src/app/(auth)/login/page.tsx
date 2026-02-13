@@ -36,7 +36,7 @@ function LoginContent() {
         .catch(() => {
           // Error handled by context
         });
-      
+
       const newUrl = new URL(window.location.href);
       newUrl.searchParams.delete('code');
       window.history.replaceState({}, '', newUrl.toString());
@@ -57,11 +57,11 @@ function LoginContent() {
   };
 
   return (
-    <AuthLayout 
-      title="Welcome Back" 
+    <AuthLayout
+      title="Welcome Back"
       subtitle="You've been missed. Sign in to continue."
     >
-      <LoginForm 
+      <LoginForm
         formData={formData}
         isLoading={isLoading}
         error={error}
@@ -74,7 +74,7 @@ function LoginContent() {
 
 export default function LoginPage() {
   return (
-    <Suspense fallback={<div className="min-h-screen bg-[#0a0a0a] flex items-center justify-center text-white/20 uppercase tracking-widest font-bold text-xs">Loading WeBelong...</div>}>
+    <Suspense fallback={<div className="min-h-screen bg-[#0a0a0a] flex items-center justify-center text-white/20 uppercase tracking-widest font-bold text-xs">Loading Panchnity...</div>}>
       <GuestGuard>
         <LoginContent />
       </GuestGuard>

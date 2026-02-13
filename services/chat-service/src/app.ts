@@ -16,9 +16,9 @@ app.set('trust proxy', 1);
 
 app.use(cors({
   origin: [
-    'https://webelong.world',
-    'https://chat.webelong.world',
-    'https://api.webelong.world',
+    'https://panchnity.com',
+    'https://chat.panchnity.com',
+    'https://api.panchnity.com',
     'http://localhost:4002',
     'http://localhost:4000',
   ],

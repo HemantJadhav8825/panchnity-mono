@@ -40,7 +40,7 @@ export function constructMetadata({
       title,
       description,
       images: [image],
-      creator: "@webelong",
+      creator: "@panchnity",
     },
     metadataBase: new URL(env.NEXT_PUBLIC_SITE_URL),
     ...(noIndex && {

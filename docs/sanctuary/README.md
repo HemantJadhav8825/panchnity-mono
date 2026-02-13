@@ -1,18 +1,18 @@
 # Sanctuary — Internal Design Rationale
 
-**Product:** We belong  
-**Status:** Internal / Experimental  
+**Product:** Panchnity
+**Status:** Internal / Experimental
 **Feature Flag:** SANCTUARY_ENABLED
 
 ---
 
 ## Overview
 
-Sanctuary is an **internal, feature-flagged module** inside _We belong_.
+Sanctuary is an **internal, feature-flagged module** inside _Panchnity_.
 
 It exists to provide a **temporary, anonymous, and ephemeral release space** for users who are not ready to bring their thoughts or emotions into shared community surfaces.
 
-Sanctuary is intentionally constrained.  
+Sanctuary is intentionally constrained.
 It is designed to be **safe, removable, and non-addictive**.
 
 ---
@@ -137,7 +137,7 @@ Sanctuary should be reconsidered or removed if:
 - It becomes a primary interaction surface
 - Requests arise for history, replies, or customization
 - Moderation overhead increases
-- It competes with core We belong flows
+- It competes with core Panchnity flows
 
 ---
 
@@ -145,7 +145,7 @@ Sanctuary should be reconsidered or removed if:
 
 Sanctuary is a **safety valve**, not a feature bet.
 
-Its purpose is to quietly support emotional regulation so that _We belong_ can remain a place of shared humanity — not unfiltered pain.
+Its purpose is to quietly support emotional regulation so that _Panchnity_ can remain a place of shared humanity — not unfiltered pain.
 
-If Sanctuary disappears one day and no one notices,  
+If Sanctuary disappears one day and no one notices,
 it means it worked exactly as intended.

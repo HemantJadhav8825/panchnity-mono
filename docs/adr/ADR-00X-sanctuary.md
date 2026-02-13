@@ -2,14 +2,14 @@
 
 **Status:** Accepted  
 **Date:** 2026-02-07  
-**Product:** We belong  
+**Product:** Panchnity  
 **Decision Owner:** Core Platform Team
 
 ---
 
 ## Context
 
-We belong is designed around belonging through presence and shared humanity.
+Panchnity is designed around belonging through presence and shared humanity.
 
 During product exploration and internal testing, it became clear that users sometimes carry unprocessed emotional load into shared spaces. When this happens, it can:
 
@@ -26,7 +26,7 @@ A constrained alternative was needed.
 
 ## Decision
 
-We will introduce **Sanctuary** as a **feature-flagged, anonymous, and ephemeral module** within We belong.
+We will introduce **Sanctuary** as a **feature-flagged, anonymous, and ephemeral module** within Panchnity.
 
 Sanctuary is intentionally designed as:
 
@@ -95,7 +95,7 @@ Explicitly excluded:
 - Identity data is snapshotted at creation time
 - All content is ephemeral and automatically purged
 
-No Sanctuary data is required by core We belong flows.
+No Sanctuary data is required by core Panchnity flows.
 
 ---
 

@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation';
 import { useAuth } from '@/context/AuthContext';
 import { getSafeOnboardingState } from '@/lib/onboarding/state';
 
-const ONBOARDING_KEY = 'webelong_onboarding_state';
+const ONBOARDING_KEY = 'panchnity_onboarding_state';
 
 // Simple interface matching local storage structure
 interface StoredState {
@@ -44,7 +44,7 @@ export const OnboardingGuard: React.FC<{ children: React.ReactNode }> = ({ child
     // If we are here, status is 'not_started' or legit 'in_progress' (if logic allowed re-entry, which it doesn't).
     // Actually, getSafeOnboardingState returns 'skipped' for 'in_progress' on init.
     // So 'in_progress' is effectively barred from re-entry on refresh.
-    
+
     // Safe to render
     // eslint-disable-next-line react-hooks/exhaustive-deps
     setIsAuthorized(true);

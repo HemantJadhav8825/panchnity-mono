@@ -12,12 +12,12 @@ const DB_CONFIGS: DBConfig[] = [
   {
     name: 'auth-service (mongodb)',
     type: 'mongodb',
-    url: "mongodb://admin:adminUser_hemant%40123@72.62.196.46:27017/hold_yourself_auth?authSource=admin"
+    url: "mongodb://admin:adminUser_hemant%40123@72.62.196.46:27017/panchnity_auth?authSource=admin"
   },
   {
-    name: 'chat-service (mongodb)',
+    name: "Chat Service",
     type: 'mongodb',
-    url: "mongodb://admin:adminUser_hemant%40123@72.62.196.46:27017/hold_yourself_chat?authSource=admin"
+    url: "mongodb://admin:adminUser_hemant%40123@72.62.196.46:27017/panchnity_chat?authSource=admin"
   }
 ];
 

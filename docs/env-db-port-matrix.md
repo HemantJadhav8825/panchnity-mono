@@ -26,8 +26,8 @@ This document provides a low-level, factual mapping of environment configuration
 
 | Service Name           | Database Type | Database Name         | Connection Env Var | Status             |
 | :--------------------- | :------------ | :-------------------- | :----------------- | :----------------- |
-| `auth-service`         | MongoDB       | `hold_yourself_auth`  | `DATABASE_URL`     | **ACTIVE**         |
-| `chat-service`         | MongoDB       | `hold_yourself_chat`  | `MONGO_URI`        | **ACTIVE**         |
+| `auth-service`         | MongoDB       | `panchnity_auth`      | `DATABASE_URL`     | **ACTIVE**         |
+| `chat-service`         | MongoDB       | `panchnity_chat`      | `MONGO_URI`        | **ACTIVE**         |
 | `payment-service`      | Postgres      | UNKNOWN               | UNKNOWN            | **NOT SET UP YET** |
 | `notification-service` | None          | N/A                   | N/A                | **NOT SET UP YET** |
 | `user-service`         | MongoDB       | `hold_yourself_users` | `DATABASE_URL`     | **PLANNED**        |

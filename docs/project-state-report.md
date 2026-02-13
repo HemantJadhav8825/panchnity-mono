@@ -94,7 +94,7 @@
 
 | Service                | DB Type | Connection Mechanism                   | Status                            |
 | :--------------------- | :------ | :------------------------------------- | :-------------------------------- |
-| `auth-service`         | MongoDB | `mongoose` (implied by `DATABASE_URL`) | ACTIVE (DB: `hold_yourself_auth`) |
+| `auth-service`         | MongoDB | `mongoose` (implied by `DATABASE_URL`) | ACTIVE (DB: `panchnity_auth`) |
 | `payment-service`      | None    | N/A                                    | NO DB YET                         |
 | `notification-service` | None    | N/A                                    | NO DB YET                         |
 | `backend`              | None    | N/A                                    | NO ACCESS (Gateway)               |
