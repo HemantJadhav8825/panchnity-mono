@@ -5,12 +5,12 @@ branches:
   - main
 
 project:
-  name: panchnity
+  name: panchnity-mono
   runtime: node
   node_version: 20
 
 server:
-  deploy_path: /root/panchnity
+  deploy_path: /root/panchnity-mono
 
 steps:
   # ----------------------------
