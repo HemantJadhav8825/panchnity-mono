@@ -4,8 +4,6 @@ import conversationRoutes from './modules/conversations/conversation.routes';
 import messageRoutes from './modules/messages/message.routes';
 import settingsRoutes from './modules/settings/settings.routes';
 import moderationRoutes from './modules/moderation/moderation.routes';
-import featureFlagRoutes from './modules/feature-flags/feature-flags.routes';
-import circleRoutes from './modules/circles/circle.routes';
 import ventRoutes from './modules/vents/vent.routes';
 import { featureFlagService } from './config/feature-flags';
 
@@ -44,6 +42,5 @@ const sanctuaryGuard = (req: express.Request, res: express.Response, next: expre
 app.use('/v1/vents', sanctuaryGuard, ventRoutes);
 app.use('/v1/settings', settingsRoutes);
 app.use('/v1/moderation', moderationRoutes);
-app.use('/v1/admin/feature-flags', featureFlagRoutes);
 
 export default app;

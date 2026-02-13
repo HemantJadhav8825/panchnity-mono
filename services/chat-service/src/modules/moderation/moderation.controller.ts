@@ -102,24 +102,6 @@ export class ModerationController {
       res.status(400).json({ error: error.message });
     }
   }
-
-  static async getReports(req: Request, res: Response) {
-    try {
-      // Optional: Add admin check here
-      const { conversationId, reporterId, status } = req.query;
-
-      const reports = await ModerationService.getReports({
-        conversationId: conversationId as string,
-        reporterId: reporterId as string,
-        status: status as string,
-      });
-
-      res.status(200).json({ reports });
-    } catch (error: any) {
-      structuredLog('error', 'moderation:get_reports_error', 'Error fetching reports', {
-        error: error.message,
-      });
-      res.status(500).json({ error: 'Failed to fetch reports' });
-    }
-  }
 }
+
+

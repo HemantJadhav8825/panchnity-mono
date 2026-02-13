@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 import { VentService } from './vent.service';
-import { FeatureFlagsService } from '../feature-flags/feature-flags.service';
+import { featureFlagService } from '../../config/feature-flags';
 
 export class VentController {
   private ventService: VentService;
@@ -10,7 +10,7 @@ export class VentController {
   }
 
   private checkSanctuaryEnabled(res: Response): boolean {
-    if (!FeatureFlagsService.isEnabled('SANCTUARY_ENABLED')) {
+    if (!featureFlagService.isEnabled('SANCTUARY_ENABLED')) {
       res.status(404).json({ error: 'Sanctuary is not enabled' });
       return false;
     }
@@ -22,15 +22,15 @@ export class VentController {
 
     try {
       const user = (req as any).user;
-      
+
       if (!user) {
         return res.status(401).json({ error: 'Unauthorized' });
       }
 
       if (!user.anonymousProfile || !user.anonymousProfile.pseudonym || !user.anonymousProfile.color) {
-        return res.status(403).json({ 
+        return res.status(403).json({
           error: 'Forbidden: Complete anonymous profile required',
-          details: 'Your session may be stale. Please try re-entering Sanctuary.' 
+          details: 'Your session may be stale. Please try re-entering Sanctuary.'
         });
       }
 
@@ -56,8 +56,8 @@ export class VentController {
       if (response.author) {
         delete response.author.id;
       }
-      
-      
+
+
       res.status(201).json(response);
     } catch (error: any) {
       if (error.message.includes('Limit reached')) {
@@ -88,7 +88,7 @@ export class VentController {
 
       const { type } = req.body;
       const vent = await this.ventService.addReaction(req.params.id, userId, type);
-      
+
       if (!vent) {
         return res.status(404).json({ error: 'Vent not found' });
       }

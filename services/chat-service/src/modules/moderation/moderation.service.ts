@@ -98,20 +98,6 @@ export class ModerationService {
       reason,
     });
   }
-
-  /**
-   * Get reports (for admin review - optional for this milestone).
-   */
-  static async getReports(filters?: {
-    conversationId?: string;
-    reporterId?: string;
-    status?: string;
-  }) {
-    const query: any = {};
-    if (filters?.conversationId) query.conversationId = filters.conversationId;
-    if (filters?.reporterId) query.reporterId = filters.reporterId;
-    if (filters?.status) query.status = filters.status;
-
-    return ConversationReportModel.find(query).sort({ createdAt: -1 });
-  }
 }
+
+

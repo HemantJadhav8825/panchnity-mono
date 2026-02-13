@@ -39,7 +39,7 @@ router.get('/v1/users/profile', requireAuth, async (req, res) => {
     // and return private fields like anonymousProfile
     const url = `${AUTH_SERVICE_URL}/v1/users/profile`;
     console.log(`[Proxy] Fetching profile from: ${url}`);
-    
+
     const response = await axios.get(url, {
       headers: {
         Authorization: req.headers.authorization
@@ -69,13 +69,7 @@ router.patch('/v1/users/profile', requireAuth, async (req, res) => {
   }
 });
 
-// Admin only route example
-router.get('/v1/admin/stats', requireAuth, requireRole('admin'), (req, res) => {
-  res.json({
-    message: 'Welcome, Admin',
-    stats: { users: 42, activeUsers: 7 }
-  });
-});
+
 
 // Anonymous User Creation (Auth Service)
 router.post('/v1/users/anonymous', requireAuth, async (req, res) => {
@@ -96,31 +90,7 @@ router.post('/v1/users/anonymous', requireAuth, async (req, res) => {
 // Chat Service Proxy
 const CHAT_SERVICE_URL = AUTH_CONFIG.CHAT_SERVICE_URL;
 
-// Circles (list, create, join, leave)
-router.use('/v1/circles', requireAuth, async (req, res, next) => {
-  if (!APP_CONFIG.SANCTUARY_ENABLED) {
-    return res.status(404).json({ error: 'Not Found' });
-  }
-  next();
-}, async (req, res) => {
-  try {
-    const url = `${CHAT_SERVICE_URL}/v1/circles${req.url === '/' ? '' : req.url}`;
-    const response = await axios({
-      method: req.method,
-      url: url,
-      data: req.method !== 'GET' ? req.body : undefined,
-      params: req.query,
-      headers: {
-        Authorization: req.headers.authorization
-      }
-    });
-    res.json(response.data);
-  } catch (error: any) {
-    const status = error.response?.status || 500;
-    const message = error.response?.data?.error || 'Chat Service Error';
-    res.status(status).json({ error: message });
-  }
-});
+
 
 // Vents (list, create, react)
 router.use('/v1/vents', requireAuth, async (req, res, next) => {
@@ -178,7 +148,7 @@ holdingSpaceRoutes.forEach(route => {
       // req.originalUrl includes the full path (e.g. /v1/shares/123)
       // We can just use req.originalUrl directly since we are mirroring the path structure
       const url = `${HOLDING_SPACE_SERVICE_URL}${req.originalUrl}`;
-      
+
       console.log(`[Proxy] Forwarding ${req.method} ${req.originalUrl} to ${url}`);
 
       const response = await axios({
@@ -199,7 +169,7 @@ holdingSpaceRoutes.forEach(route => {
       // Forward the error from the microservice
       const status = error.response?.status || 500;
       const data = error.response?.data || { error: 'Holding Space Service unavailable' };
-      
+
       console.error(`[Proxy Error] ${req.method} ${req.originalUrl} failed: ${status}`);
       res.status(status).json(data);
     }
