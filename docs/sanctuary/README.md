@@ -19,7 +19,7 @@ It is designed to be **safe, removable, and non-addictive**.
 
 ## Why Sanctuary Exists
 
-We belong is built around _belonging through presence_.  
+Panchnity is built around _belonging through presence_.  
 That presence breaks down when users carry unprocessed emotional load into shared spaces.
 
 Sanctuary exists to:

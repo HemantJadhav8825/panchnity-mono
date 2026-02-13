@@ -49,7 +49,7 @@ The first time you enter Sanctuary:
 This identity:
 
 - Exists **only inside Sanctuary**
-- Is never shown elsewhere in We belong
+- Is never shown elsewhere in Panchnity
 - Cannot be linked back to you by other users
 
 You don’t need to set anything up — it happens automatically.
