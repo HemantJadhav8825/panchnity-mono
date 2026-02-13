@@ -16,7 +16,7 @@ const start = async () => {
     await connectDatabase();
 
     app.listen(ENV.PORT, () => {
-      console.log(`Auth Service running on port ${ENV.PORT}`);
+      console.log(`✅ Auth Service running on port ${ENV.PORT}`);
     });
   } catch (err: any) {
     console.error('❌ FATAL: Failed to start Auth Service:');
