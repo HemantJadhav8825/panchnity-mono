@@ -4,18 +4,15 @@ import path from 'path';
 
 dotenv.config();
 
-const AUTH_DIR = '/Users/hemantjadhav/Desktop/projects/hold yourself/services/auth-service';
+const AUTH_DIR = path.resolve(__dirname, '../../../auth-service');
 const PUBLIC_KEY_PATH = path.join(AUTH_DIR, 'public.pem');
-
 export const ENV = {
   PORT: process.env.PORT || '3200',
   NODE_ENV: process.env.NODE_ENV || 'development',
-  
+
   // Security
-  JWT_PUBLIC_KEY: fs.existsSync(PUBLIC_KEY_PATH) 
-    ? fs.readFileSync(PUBLIC_KEY_PATH, 'utf8').trim() 
-    : process.env.JWT_PUBLIC_KEY!,
-  
+  JWT_PUBLIC_KEY: process.env.JWT_PUBLIC_KEY || '',
+
   // Database
   DATABASE_URL: process.env.DATABASE_URL!,
 };

@@ -1,6 +1,6 @@
 # Mood Checkin Page Overrides
 
-> **PROJECT:** Hold Yourself
+> **PROJECT:** Panchnity
 > **Generated:** 2026-02-02 01:54:43
 > **Page Type:** General
 

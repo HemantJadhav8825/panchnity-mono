@@ -1,6 +1,6 @@
 # Create Post Page Overrides
 
-> **PROJECT:** Hold Yourself
+> **PROJECT:** Panchnity
 > **Generated:** 2026-02-02 01:55:52
 > **Page Type:** Blog / Article
 

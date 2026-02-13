@@ -6,7 +6,7 @@
 
 ---
 
-**Project:** Hold Yourself
+**Project:** Panchnity
 **Generated:** 2026-02-02 01:57:57
 **Category:** Mental Health App
 
