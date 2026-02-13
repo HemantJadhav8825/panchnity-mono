@@ -1,0 +1,21 @@
+{
+  "workspace": {
+    "id": "00707ef4-685e-4f8c-8e43-22e3272ea11a"
+  },
+  "entities": {
+    "collections": [
+      "../gateway/backend-gateway.postman_collection.json",
+      "../services/auth-service.postman_collection.json",
+      "../services/notification-service.postman_collection.json",
+      "../services/payment-service.postman_collection.json"
+    ],
+    "environments": [
+      "../environments/local.postman_environment.json",
+      "../environments/production.postman_environment.json",
+      "../environments/staging.postman_environment.json"
+    ],
+    "specs": [],
+    "flows": [],
+    "globals": []
+  }
+}

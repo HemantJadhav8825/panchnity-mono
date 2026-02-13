@@ -1,0 +1,67 @@
+# NodePilot Pipeline Configuration
+version: 1
+
+branches:
+  - main
+
+project:
+  name: panchnity
+  runtime: node
+  node_version: 20
+
+server:
+  deploy_path: /root/panchnity
+
+steps:
+  # ----------------------------
+  # INSTALL
+  # ----------------------------
+  install:
+    - corepack enable
+    - pnpm store prune
+    - pnpm install --force
+
+  # ----------------------------
+  # BUILD
+  # ----------------------------
+  build:
+    # Kill all caches (non-negotiable)
+    - rm -rf .turbo
+    - rm -rf apps/frontend/.next
+    - rm -rf apps/backend/dist
+    - rm -rf services/**/dist
+
+    # Force fresh Turbo builds (package-name based)
+    - TURBO_FORCE=true pnpm build --filter @panchnity/frontend...
+    - TURBO_FORCE=true pnpm build --filter @panchnity/backend...
+    - TURBO_FORCE=true pnpm build --filter @panchnity/auth-service...
+    - TURBO_FORCE=true pnpm build --filter @panchnity/chat-service...
+
+
+    # Build guards (fail fast if something didn't compile)
+    - test -d apps/frontend/.next
+    - test -f apps/backend/dist/server.js
+    - test -f services/auth-service/dist/server.js
+    - test -f services/chat-service/dist/server.js
+
+
+  # ----------------------------
+  # DEPLOY
+  # ----------------------------
+  deploy:
+    # Backend
+    - pm2 delete panchnity-backend || true
+    - pm2 start ecosystem.config.js --only panchnity-backend
+
+    # Services
+    - pm2 delete panchnity-auth || true
+    - pm2 delete panchnity-chat || true
+
+    - pm2 start ecosystem.config.js --only panchnity-auth,panchnity-chat
+
+    # Frontend (Next.js)
+    - pm2 delete panchnity-frontend || true
+    - pm2 start ecosystem.config.js --only panchnity-frontend
+
+    # Persist process list
+    - pm2 save

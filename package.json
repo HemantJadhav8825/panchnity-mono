@@ -1,0 +1,42 @@
+{
+  "name": "panchnity",
+  "private": true,
+  "packageManager": "pnpm@10.28.2",
+  "workspaces": [
+    "apps/*",
+    "services/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev --concurrency=20",
+    "dev:services": "turbo run dev --filter=\"./services/*\"",
+    "dev:apps": "turbo run dev --filter=\"./apps/*\"",
+    "dev:gateway": "turbo run dev --filter=\"@panchnity/backend\"",
+    "dev:chat": "turbo run dev --filter=\"@panchnity/chat-service\"",
+    "dev:frontend": "turbo run dev --filter=\"@panchnity/frontend\"",
+    "lint": "turbo run lint",
+    "postman:sync": "tsx scripts/sync-postman.ts",
+    "audit:ports": "tsx scripts/audit-ports.ts",
+    "check:consistency": "bash ./antigravity/consistency.sh",
+    "db:reset": "tsx scripts/db/cleanup.ts",
+    "db:cleanup": "CONFIRM_DB_RESET=true tsx scripts/db/cleanup.ts",
+    "db:cleanup:prod": "CONFIRM_DB_RESET=true tsx scripts/db/cleanupProd.ts",
+    "git:cleanup": "bash scripts/git-cleanup.sh",
+    "git:cleanup:remote": "bash scripts/git-cleanup-remote.sh"
+  },
+  "devDependencies": {
+    "@types/axios": "^0.14.4",
+    "@types/dotenv": "^8.2.3",
+    "@types/node": "^25.1.0",
+    "@types/pg": "^8.16.0",
+    "axios": "^1.13.4",
+    "dotenv": "^17.2.3",
+    "mongodb": "^7.0.0",
+    "mongoose": "^9.1.5",
+    "pg": "^8.18.0",
+    "tsx": "^4.21.0",
+    "turbo": "latest",
+    "typescript": "latest"
+  }
+}

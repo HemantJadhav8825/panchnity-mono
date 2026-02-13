@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* WARM PAPER THEME (IVORY) */
+    --background: 40 20% 97%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 40 20% 99%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 40 20% 99%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 10 70% 55%; /* Slightly earthy primary */
+    --primary-foreground: 40 20% 98%;
+
+    --secondary: 40 10% 92%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 40 10% 92%; /* Warm muted grey */
+    --muted-foreground: 25 10% 45%;
+
+    --accent: 40 15% 94%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 40 10% 88%;
+    --input: 40 10% 88%;
+    --ring: 10 70% 55%;
+
+    --radius: 0.5rem;
+    --illustration-secondary: 30 40% 95%;
+  }
+
+  .dark {
+    --background: 240 5% 6%; /* Deep charcoal/black, slightly cool */
+    --foreground: 40 10% 96%; /* Ivory white text */
+
+    --card: 240 4% 9%;
+    --card-foreground: 40 10% 96%;
+
+    --popover: 240 4% 9%;
+    --popover-foreground: 40 10% 96%;
+
+    --primary: 10 70% 65%;
+    --primary-foreground: 40 10% 96%;
+
+    --secondary: 240 4% 14%;
+    --secondary-foreground: 40 10% 96%;
+
+    --muted: 240 4% 14%;
+    --muted-foreground: 240 5% 60%;
+
+    --accent: 240 4% 14%;
+    --accent-foreground: 40 10% 96%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 40 10% 96%;
+
+    --border: 240 4% 14%;
+    --input: 240 4% 14%;
+    --ring: 10 70% 65%;
+    --illustration-secondary: 222.2 84% 10%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-body;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading text-foreground;
+  }
+}

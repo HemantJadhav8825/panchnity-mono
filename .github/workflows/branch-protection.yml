@@ -1,0 +1,35 @@
+name: Git Governance Enforcer
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  enforce-no-direct-commits:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Validate Commit Type
+        run: |
+          # Get parent count of the latest commit
+          PARENT_COUNT=$(git log -1 --pretty=%P | wc -w | xargs)
+
+          echo "Commit Hash: $(git log -1 --pretty=%H)"
+          echo "Parent Count: $PARENT_COUNT"
+
+          if [ "$PARENT_COUNT" -lt 2 ]; then
+            echo "::error::⛔ DIRECT COMMIT DETECTED ON MAIN! ⛔"
+            echo "--------------------------------------------------------"
+            echo "Strict Governance Violation:"
+            echo "You pushed a commit directly to 'main' without a Merge."
+            echo "This repository requires all changes to come via Pull Requests."
+            echo "--------------------------------------------------------"
+            exit 1
+          else
+            echo "✅ Merge commit detected. Governance check passed."
+          fi

@@ -1,0 +1,12 @@
+node_modules
+.env
+dist
+.turbo
+.vercel
+*.log
+.next
+*.tsbuildinfo
+coverage
+.nyc_output
+next-env.d.ts
+testsprite_tests

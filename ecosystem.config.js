@@ -1,0 +1,62 @@
+module.exports = {
+  apps: [
+    {
+      name: "hold-yourself-backend",
+      cwd: "./apps/backend",
+      script: "dist/server.js",
+      env_file: ".env",
+      watch: false,
+      max_memory_restart: "1G",
+      exec_mode: "fork",
+      instances: 1,
+      autorestart: true,
+      env: {
+        NODE_ENV: "production",
+        PORT: 4000,
+      },
+    },
+    {
+      name: "hold-yourself-auth",
+      cwd: "./services/auth-service",
+      script: "dist/server.js",
+      env_file: ".env",
+      watch: false,
+      max_memory_restart: "1G",
+      exec_mode: "fork",
+      instances: 1,
+      autorestart: true,
+      env: {
+        NODE_ENV: "production",
+        PORT: 4100,
+      },
+    },
+    {
+      name: "hold-yourself-chat",
+      cwd: "./services/chat-service",
+      script: "dist/server.js",
+      env_file: ".env",
+      watch: false,
+      max_memory_restart: "1G",
+      exec_mode: "fork",
+      instances: 1,
+      autorestart: true,
+      env: {
+        NODE_ENV: "production",
+        PORT: 4200,
+      },
+    },
+
+    {
+      name: "hold-yourself-frontend",
+      cwd: "./apps/frontend",
+      script: "node_modules/next/dist/bin/next",
+      args: "start -p 4002",
+      env_file: ".env.local",
+      watch: false,
+      max_memory_restart: "1G",
+      exec_mode: "fork",
+      instances: 1,
+      autorestart: true,
+    },
+  ],
+};
