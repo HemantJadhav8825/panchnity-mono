@@ -4,9 +4,9 @@
   "private": true,
   "main": "dist/server.js",
   "scripts": {
-    "dev": "PORT=3100 tsx watch src/server.ts",
+    "dev": "PORT=4100 tsx watch src/server.ts",
     "build": "tsc",
-    "start": "PORT=3100 node dist/server.js",
+    "start": "PORT=4100 node dist/server.js",
     "lint": "eslint src"
   },
   "dependencies": {

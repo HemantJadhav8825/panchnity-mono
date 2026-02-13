@@ -103,7 +103,7 @@ Follow these steps to set up the project locally.
 
 | Service       | Port |
 | :------------ | :--- |
-| Frontend      | 3002 |
+| Frontend      | 4002 |
 | Backend       | 4000 |
 | Auth Service  | 4100 |
 | Chat Service  | 4200 |
