@@ -1,6 +1,6 @@
 # Panchnity
 
-> A mental health-focused social platform designed to foster meaningful connections without the pressure of metrics.
+> A mental health-focused social platform designed to foster meaningful connections without the pressure of metrics..
 
 ![Project Status](https://img.shields.io/badge/status-active-success.svg)
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
